@@ -1,0 +1,303 @@
+body {
+    background-color: var(--bg-body);
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 1rem;
+}
+
+.register {
+    padding: 3rem;
+    background-color: var(--bg-card);
+    width: 100%;
+    height: 100%;
+    max-width: 80rem;
+    max-height: 58.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.register-title {
+    font-size: 3rem;
+}
+
+.register-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.register-card__area-input {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.register-card__label {
+    font-size: 1.5rem;
+    color: #757575;
+    font-weight: 600;
+}
+
+.register-card__input {
+    width: 29rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid #D2D5DB;
+    border-radius: 2rem;
+    color: #374151;
+}
+
+.register-card__input:focus {
+    outline: 0.1rem solid var(--bg-hero-gradient-end);
+}
+
+.register-return__label {
+    font-size: 1.5rem;
+    color: #757575;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.register-return {
+    width: 29rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    color: #374151;
+    text-align: center;
+    background-color: var(--bg-hero-gradient-start);
+    border: 0.1rem solid var(--bg-button-primary-hover);
+    font-weight: bold;
+}
+
+.register-button {
+    margin-top: 3rem;
+    width: 84%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: bolder;
+    color: var(--color-text-white);
+    background-color: var(--bg-button-primary);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.register-button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.exit-letf__image-user,
+.exit-letf__image-clock,
+.exit-letf__image-return,
+.exit-letf__image-calendar,
+.exit-center__image-attention,
+.exit-right__image-delete {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Exit */
+.exit {
+    margin-top: 4rem;
+    padding: 5rem;
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 80rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+
+.exit-title {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.exit-content {
+    width: 90%;
+    height: 100%;
+    border-top: 0.1rem solid #D2D5DB;
+}
+
+.exit-card {
+    width: 100%;
+    display: flex;
+    border: 1px solid #D2D5DB;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #F9FAFB;
+    gap: 2rem;
+    border-radius: 1.5rem;
+}
+
+.exit-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #1F2937;
+}
+
+.exit-left__user {
+    display: flex;
+    align-items: center;
+}
+
+.area--left {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-hero-gradient-start);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+.exit-letf__image-user {
+    margin-right: 2.2rem;
+    margin-left: 0.5rem;
+}
+
+.exit-left__name {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--bg-hero-gradient-start);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    color: #1F2937;
+}
+
+.left-image {
+    margin-right: 2rem;
+}
+
+.exit-center {
+    width: 100%;
+    flex: 3;
+}
+
+.exit-center__title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-weight: 700;
+}
+
+.exit-center__text {
+    width: 27rem;
+    height: 15.8rem;
+    resize: none;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-family: var(--font-primary);
+    color: #333;  
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    border: 1px solid var(--bg-hero-gradient-start); 
+    outline: none;              
+}
+
+.exit-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.exit-right__card-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: red;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.exit-right__image-delete {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Button of delete */
+.delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.delete-area {
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 2rem;
+    width: 40rem;
+    height: 22.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.delete-title {
+    font-size: var(--font-primary);
+    font-size: 2.5rem;
+}
+
+.delete-text {
+    text-align: center;
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    font-size: 1.8rem;
+}
+
+.delete-button {
+    display: flex;
+    gap: 2rem;
+}
+
+.delete-button__link {
+    cursor: pointer;
+    width: 11.8rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.button--link1 {
+    background-color: #D1D5DB;
+    color: #26303D;
+}
+
+.button--link2 {
+    background-color: #EF4444;
+    color: #fff;
+}
