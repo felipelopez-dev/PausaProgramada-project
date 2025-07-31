@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Histórico</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/image/favicon/site.webmanifest">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/history.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@;400;500;600;700;800&display=swap" 
+    rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-logo" id="header-logo">
+            <a href="../index.html" class="header-link" tabindex="0">
+                <img class="header-image" src="../assets/image/brand/logo.png" alt="Imagem da logotipo da marca">
+                <span class="header-text">PausaProgramada</span>
+            </a>
+        </div>
+        <nav class="header-menu">
+            <ul class="header-menu__content">
+                <li class="header-menu__list" tabindex="1">
+                    <a href="../index.html" class="header-menu__link">Início</a>
+                </li>
+                <li class="header-menu__list" tabindex="2">
+                    <a href="../pages/register.html" class="header-menu__link">Registrar</a>
+                </li>
+                <li class="header-menu__list" tabindex="3">
+                    <a href="../pages/guide.html" class="header-menu__link">Guia</a>
+                </li>
+                <li class="header-menu__list">
+                    <a href="../pages/history.html" class="header-menu__link">Histórico</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-exit" tabindex="4">
+            <img class="header-exit__image" src="../assets/image/svg/exit.svg" 
+            alt="Imagem de uma porta" title="Botão de saída">
+        </div>
+    </header>
+
+    <div class="content">
+        <section class="history">
+            <div class="history-area">
+                <h1 class="history-area__title">
+                    Histórico de Mensagens Excluídas
+                </h1>
+            </div>
+            <p class="history-text">
+                Aqui você pode visualizar todos os registos de saída que foram excluídos do sistema PausaProgramada, 
+                mantendo a transparência e um registo completo.
+            </p>
+        </section>
+
+        <section class="filter">
+            <div class="filter-area">
+                <div class="filter-area__content">
+                    <img class="filter-area__image" src="../assets/image/svg/filter.svg" 
+                    alt="Imagem de um prego">
+                    <h2 class="filter-area__title">
+                        Filtrar Histórico por Data
+                    </h2>
+                </div>
+                <div class="filter-area__line"></div>
+            </div>
+            <div class="filter-input__area">
+                <label class="filter-input__label" for="filter-input__date">Selecione uma data:</label>
+                <input 
+                    type="date"
+                    class="filter-input"
+                    name="date"
+                    id="filter-input__date"
+                >
+            </div>
+            <div class="filter-btn">
+                <button type="button" class="filter-button__1 filter--btn">
+                    <img class="filter-button__image" src="../assets/image/svg/calendar-check.svg" 
+                    alt="Imagem de calendário">
+                    <span class="filter-button__text">Aplicar filtro</span>
+                </button>
+                <button type="button" class="filter-button__2 filter--btn" >
+                    <img class="filter-button__image" src="../assets/image/svg/list-cross.svg" 
+                    alt="Imagem de uma lista">
+                    <span class="filter-button__text">Mostrar todos</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="excluded">
+            <div class="excluded-header">
+                <div class="excluded-header__area">
+                    <img class="excluded-header__image" src="../assets/image/svg/list-cross.svg" 
+                    alt="Imagem de uma lista">
+                    <h3 class="excluded-header__title">
+                        Registros Excluídos
+                    </h3>
+                </div>
+                <div class="excluded-header__line"></div>
+            </div> 
+
+            <div class="excluded-area">
+                <div class="excluded-area__content">
+                    <img class="excluded-area__image" src="../assets/image/svg/calendar.svg" alt="">
+                    <time class="excluded-area__time">
+                        27/07/2025
+                    </time>
+                </div>
+                <section class="excluded-card">
+                    <div class="excluded-left">
+                        <div class="excluded-left__user">
+                            <img class="excluded-letf__image-user excluded-left--image" 
+                            src="../assets/image/svg/user.svg" alt="Imagem de um usuário">
+                            <span class="excluded-left__name">
+                                Felipe Miranda
+                            </span>
+                        </div>
+                        <div class="excluded-left__clock area--left">
+                            <img class="excluded-letf__image-clock left--image" 
+                            src="../assets/image/svg/clock.svg" alt="Imagem de um relógio">
+                            <time class="excluded-left__excluded-register">
+                               Saída: 12:00
+                            </time>
+                        </div>
+                        <div class="excluded-left__return area--left">
+                            <img class="excluded-letf__image-return left--image" 
+                            src="../assets/image/svg/return.svg" alt="Imagem de uma seta">
+                            <time class="excluded-left__return-register">
+                               Retorno: 13:00
+                            </time>
+                        </div>
+                    </div>
+                
+                    <div class="excluded-center">
+                        <p class="excluded-center__title">
+                            Descrição:
+                        </p>
+                        <textarea class="excluded-center__text" readonly></textarea>
+                    </div>
+                
+                    <div class="excluded-right">
+                      <div class="excluded-right__content">
+                          <h4 class="excluded-right__title">
+                            Excluído:
+                           </h4>
+                        <div class="excluded-right__area">
+                            <span class="excluded-right__subtile">Hora:</span>
+                            <time class="excluded-right__time">12:00</time>
+                        </div>
+                      </div>
+                      <div class="excluded-right__attention">
+                        <img class="excluded-right__attention-image" src="../assets/image/svg/attention.svg" 
+                        alt="Imagem de uma placa de atenção">
+                        <p class="excluded-right__text">
+                            Informação temporária – 1 semana.
+                        </p>
+                      </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-description">
+            © 2025 Desenvolvido por Felipe Lopez - Engenheiro de Software.
+        </p>
+        <p class="footer-text">
+            Projeto com todos os direitos reservados.
+        </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login | PausaProgramada</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/image/favicon/site.webmanifest">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@;400;500;600;700;800&display=swap" 
+    rel="stylesheet">
+</head>
+
+<body> 
+
+    <div class="login">
+        <section class="login-left">
+            <div class="login-left__area">
+                
+            </div>
+        </section>
+        <section class="login-right">
+            <div class="login-right__area">
+                <form class="login-right__form">
+                    <h1 class="login-right__title">Login</h1>
+                    <div class="login-right__content">
+                        <div class="login-right__area-input">
+                            <div class="login-right__card-input">
+                                <div class="login-right__card">
+                                    <label for="login-right__user" class="login-right__label" >Usuário</label>
+                                    <input 
+                                        type="text" 
+                                        name="user" 
+                                        placeholder="Digite aqui"
+                                        required
+                                        class="login-right__input login--user"
+                                        id="login-right__user"
+                                    />
+                                </div>
+                                <img class="login-right__icon-user" src="../assets/image/svg/user-login.svg" 
+                                alt="Imagem de ícone de usuário">
+                            </div>
+                        </div>
+                        <div class="login-right__area-input">
+                            <div class="login-right__area-input">
+                                <div class="login-right__card-input">
+                                    <div class="login-right__card">
+                                        <label for="login-right__password" class="login-right__label" >Senha</label>
+                                        <input 
+                                            type="password" 
+                                            name="user" 
+                                            placeholder="Digite aqui"
+                                            required
+                                            class="login-right__input login--password"
+                                            id="login-right__password"
+                                        />
+                                    </div>
+                                    <img class="login-right__icon-eye-slash active" 
+                                    src="../assets/image/svg/eye-slash.svg" alt="Mostrar senha">
+                                    <img class="login-right__icon-eye" src="../assets/image/svg/eye.svg" 
+                                    alt="Ocultar senha">
+                                </div>
+                                <span class="login-right__print-validation"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button type="button" class="login-right__button">
+                        Entrar
+                    </button>
+                </form>
+                <div class="login-right__brand">
+                    <img class="login-right__image" src="../assets/image/brand/login-circle.png" 
+                    alt="Imagem da marca do site">
+                    <p class="login-right__brand-title">
+                        PausaProgramada
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Limite de Caracteres</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    #aviso {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Limite de até 262 caracteres</h2>
+
+  <textarea id="texto" maxlength="262" oninput="atualizarContagem()" placeholder="Digite seu texto aqui (máx. 262 caracteres)..."></textarea>
+  <p>Caracteres: <span id="contador">0</span> / 262</p>
+  <p id="aviso"></p>
+
+  <script>
+    function atualizarContagem() {
+      const campo = document.getElementById("texto");
+      const contador = document.getElementById("contador");
+      const aviso = document.getElementById("aviso");
+
+      const comprimento = campo.value.length;
+      contador.textContent = comprimento;
+
+      if (comprimento >= 262) {
+        aviso.textContent = "⚠️ Você atingiu o limite máximo de 262 caracteres!";
+      } else {
+        aviso.textContent = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
