@@ -57,7 +57,7 @@
 }
 
 .header-menu__list:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.1rem);
     color: var(--color-teal-dark);
 }
 

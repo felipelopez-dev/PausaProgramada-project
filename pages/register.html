@@ -74,6 +74,7 @@
                         name="name" 
                         placeholder="Nome do responsavél"
                         required
+                        maxlength="14"
                         tabindex="5"
                     >
                 </div>
@@ -93,20 +94,6 @@
 
             <div class="register-card__area">
                 <div class="register-card__area-input">
-                    <label class="register-card__label" for="register-card__input-description">Descrição:</label>
-                    <input 
-                        type="text" 
-                        class="register-card__input"
-                        id="register-card__input-description"
-                        name="description" 
-                        placeholder="Adicionar descrição"
-                        required
-                        maxlength="22"
-                        tabindex="7"
-                    >
-                </div>
-
-                <div class="register-card__area-input">
                     <label class="register-card__label"  for="register-card__input-return">Duração da saída (minutos):</label>
                     <input 
                         type="number" 
@@ -115,19 +102,40 @@
                         name="return"
                         placeholder="Ex: 30"
                         required
-                        tabindex="8"
+                        tabindex="7"
+                        title="Duração até 2 horas."
                     >
+                </div>
+
+                <div class="register-card__area-input">
+                    <label class="register-card__label" for="register-return" >Retorno previsto</label>
+                    <p class="register-return" id="register-return" tabindex="8">
+                        --:--
+                    </p>
                 </div>
             </div>
         </div>
-        <label class="register-return__label" for="register-return" >Retorno previsto</label>
-        <p class="register-return" id="register-return" tabindex="9">
-            --:--
-        </p>
-        <button type="button" class="register-button" tabindex="10">
+        <div class="register-description">
+            <div class="register-description__title register-card__label">Descrição</div>
+            <textarea 
+                maxlength="330" 
+                placeholder="Adicione uma breve descrição..." 
+                class="register-description__text"></textarea>
+            <p class="register-description__title-button">
+                Atalhos rápidos: clique para adicionar um título à descrição e começar a escrever.
+            </p>
+            <div class="register-description__area-button">
+                <button type="button" class="register-description__button">Almoço</button>
+                <button type="button" class="register-description__button">Café da manhã</button>
+                <button type="button" class="register-description__button">Intervalo</button>
+                <button type="button" class="register-description__button">Outros</button>
+            </div>
+        </div>
+        
+        <button type="button" class="register-button" tabindex="9">
             + Adicionar Nova Saída
         </button> 
-        <button type="button" class="register-button register--reset" tabindex="11">
+        <button type="button" class="register-button register--reset" tabindex="10">
             Fim de Expediente
         </button>
     </div>
@@ -180,7 +188,11 @@
                 <div class="exit-right">
                     <div class="exit-right__card-delete" tabindex="11">
                         <img class="exit-right__image-delete" src="../assets/image/svg/delete.svg" 
-                        alt="Imagem de um lixeiro">
+                        alt="Imagem de um lixeiro" title="Botão de excluir.">
+                    </div>
+                    <div class="exit-right__card-edit" tabindex="12">
+                        <img class="exit-right__image-edit" src="../assets/image/svg/edit.svg" 
+                        alt="Imagem de um lápis" title="Botão de editar as saída.">
                     </div>
                 </div>
             </section>
@@ -191,7 +203,7 @@
      <div class="password-message password-message--active">
         <div class="password-delete__area">
             <h3 class="delete-title">
-            Confirmar Exclusão
+            Confirmação do registro
             </h3>
             <p class="delete-text">
                Por favor, insira a senha para adicionar o registro de saída.
@@ -214,19 +226,22 @@
         </div>
     </div>
 
-    <!-- Area of text -->
-     <div class="area-text area-text--active">
-        <div class="area-text__message">
-            <p class="area-text__count">
-                Caracteres: <span id="contador">0</span> / 260
+    <!-- Button of reset -->
+     <div class="password-reset password-reset--active">
+        <div class="password-delete__area">
+            <h3 class="delete-title">
+            Finalizar Expediente
+            </h3>
+            <p class="delete-text">
+               Ao clicar em 'Confirmar', o seu expediente será encerrado e o formulário de registro será limpo.
             </p>
-            <p class="area-text__attention"></p>
-            <textarea 
+            <input 
+                type="password" 
+                name="password" 
+                class="password-reset__input"
+                placeholder="Digite aqui a senha"
                 tabindex="1"
-                name="messagem" 
-                maxlength="260" 
-                placeholder="Digite seu texto aqui (máx. 262 caracteres)..." 
-                class="area-text__textarea"></textarea>
+            >
             <div class="delete-button">
                 <button type="button" tabindex="2" class="delete-button__link button--link1">
                     Cancelar

@@ -11,6 +11,39 @@
     flex: 1;
 }
 
+.login-left__area {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem;
+    height: 100%;
+    margin-left: 5rem;
+}
+
+.login-left__area-title {
+    font-size: 10rem;
+    font-weight: 800;
+    color: var(--color-mint-medium);
+    width: 52rem;
+    line-height: 1;
+}
+
+.login-left__area-subtitle {
+    font-size: 7rem;
+    font-weight: 800;
+    color: var(--color-teal);
+}
+
+.login-left__area-text {
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--color-gray);
+    margin-right: 5rem;
+}
+
 .login-right {
     flex: 1;
     display: flex;
