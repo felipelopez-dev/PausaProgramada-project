@@ -232,6 +232,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .excluded-area {
+    gap: 3rem;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -240,6 +241,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
+    box-shadow: 0 0 0.3rem var(--color-blackish);
     border: 0.1rem solid var(--color-gray-border);
 }
 

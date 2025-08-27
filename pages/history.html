@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Histórico</title>
 
@@ -110,75 +112,14 @@
         <section class="excluded">
             <div class="excluded-header">
                 <div class="excluded-header__area">
-                    <img class="excluded-header__image" src="../assets/image/svg/list-cross.svg" 
-                    alt="Imagem de uma lista">
-                    <h3 class="excluded-header__title">
-                        Registros Excluídos
-                    </h3>
+                    <img class="excluded-header__image" src="../assets/image/svg/list-cross.svg" alt="Imagem de uma lista">
+                    <h3 class="excluded-header__title">Registros Excluídos</h3>
                 </div>
                 <div class="excluded-header__line"></div>
             </div> 
-
-            <div class="excluded-area">
-                <div class="excluded-area__content">
-                    <img class="excluded-area__image" src="../assets/image/svg/calendar.svg" alt="">
-                    <time class="excluded-area__time">
-                        27/07/2025
-                    </time>
-                </div>
-                <section class="excluded-card">
-                    <div class="excluded-left">
-                        <div class="excluded-left__user">
-                            <img class="excluded-letf__image-user excluded-left--image" 
-                            src="../assets/image/svg/user.svg" alt="Imagem de um usuário">
-                            <span class="excluded-left__name">
-                                Felipe Miranda
-                            </span>
-                        </div>
-                        <div class="excluded-left__clock area--left">
-                            <img class="excluded-letf__image-clock left--image" 
-                            src="../assets/image/svg/clock.svg" alt="Imagem de um relógio">
-                            <time class="excluded-left__excluded-register">
-                               Saída: 12:00
-                            </time>
-                        </div>
-                        <div class="excluded-left__return area--left">
-                            <img class="excluded-letf__image-return left--image" 
-                            src="../assets/image/svg/return.svg" alt="Imagem de uma seta">
-                            <time class="excluded-left__return-register">
-                               Retorno: 13:00
-                            </time>
-                        </div>
-                    </div>
-                
-                    <div class="excluded-center">
-                        <p class="excluded-center__title">
-                            Descrição:
-                        </p>
-                        <textarea class="excluded-center__text" ></textarea>
-                    </div>
-                
-                    <div class="excluded-right">
-                      <div class="excluded-right__content">
-                          <h4 class="excluded-right__title">
-                            Excluído:
-                           </h4>
-                        <div class="excluded-right__area">
-                            <span class="excluded-right__subtile">Hora:</span>
-                            <time class="excluded-right__time">12:00</time>
-                        </div>
-                      </div>
-                      <div class="excluded-right__attention">
-                        <img class="excluded-right__attention-image" src="../assets/image/svg/attention.svg" 
-                        alt="Imagem de uma placa de atenção">
-                        <p class="excluded-right__text">
-                            Informação temporária – 1 semana.
-                        </p>
-                      </div>
-                    </div>
-                </section>
-            </div>
+            <div class="excluded-area history-content"></div>
         </section>
+
     </div>
 
     <footer class="footer">
@@ -189,6 +130,18 @@
             Projeto com todos os direitos reservados.
         </p>
     </footer>
+
     
+    <script type="module" src="../assets/js/firebaseConfig.js" defer></script>
+    <script type="module" src="../assets/js/validationRegister.js" defer></script>
+    <script type="text/javascript" src="../assets/js/timeDescription.js" defer></script>
+    <script type="text/javascript" src="../assets/js/exitButton.js" defer></script>
+    <script>
+        if (sessionStorage.getItem('usuarioLogado') !== 'true') {
+            window.location.replace('../pages/login.html');
+        }
+    </script>
+
+
 </body>
 </html>

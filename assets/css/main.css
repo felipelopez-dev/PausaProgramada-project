@@ -281,7 +281,6 @@
 
 /* Footer */
 .footer {
-    height: 20rem;
     background-color: var(--color-blue-gray);
     display: flex;
     flex-direction: column;
@@ -289,6 +288,7 @@
     justify-content: center;
     width: 100%;
     padding: 10rem;
+    height: 50%;
 }
 
 .footer-description {

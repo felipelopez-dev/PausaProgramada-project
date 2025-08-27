@@ -103,14 +103,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.question-filter__area:hover {
-    background-color: var(--color-teal-dark);
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.3);
 }
 
 .question-filter__image {
@@ -211,6 +203,7 @@ body {
 
 /* start */
 .start {
+    padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;

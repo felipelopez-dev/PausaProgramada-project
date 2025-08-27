@@ -1,6 +1,6 @@
 .login {
     display: flex;
-    background-image: url('/assets/image/login/login.png');
+    background-image: url('../../assets/image/login/login.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -174,4 +174,9 @@
     font-weight: 700;
     color: var(--color-white);
     text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2);
+}
+
+.login-right__print-validation {
+    color: var(--color-black);
+    margin-left: 0.5rem;
 }
