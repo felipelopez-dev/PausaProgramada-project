@@ -28,27 +28,27 @@ O **Pausa Programada** foi desenvolvido para resolver esse gargalo, oferecendo u
 ### Tela de Login  
 O sistema inicia com uma tela de autenticação simples, garantindo que apenas usuários autorizados possam registrar e consultar as pausas.  
 
-![Login](assets/img/screenshots/login.png)  
+![Login](assets/image/screenshots/login.png)  
 
 ### Tela Inicial  
 Após o login, o usuário acessa a página principal, onde pode iniciar o registro das pausas programadas e não programadas.  
 
-![Home](assets/img/screenshots/home.png) 
+![Home](assets/image/screenshots/home.png) 
 
 ### Registro de Pausa  
 Formulário intuitivo para registrar pausas, com campos para motivo, horário e observações.  
 
-![Register](assets/img/screenshots/register.png) 
+![Register](assets/image/screenshots/register.png) 
 
 ### Guia do site 
 Guia para solucionar dúvidas que possam surgir durante o uso do site.
 
-![Register](assets/img/screenshots/guide.png) 
+![Register](assets/image/screenshots/guide.png) 
 
 ### Histórico de Pausas  
 Lista com todas as pausas registradas, permitindo filtrar e excluir registros antigos.  
 
-![Register](assets/img/screenshots/history.png)  
+![Register](assets/image/screenshots/history.png)  
 
 ---
 
