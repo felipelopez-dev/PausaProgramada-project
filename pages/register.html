@@ -54,6 +54,31 @@
                 </li>
             </ul>
         </nav>
+        <div class="header-mobile">
+            <img class="header-mobile__image" src="../assets/image/svg/menu.svg" 
+            alt="Imagem de menu" title="Botão de menu">
+        </div>
+        <div class="mobile">
+            <button class="close-menu">
+                <img class="close-menu__image" src="../assets/image/svg/close-circle.svg" alt="Ícone de fechar menu">
+            </button>
+            <nav class="mobile-menu">
+                <ul class="mobile-menu__content">
+                    <li class="mobile-menu__list">
+                        <a href="../index.html" class="mobile-menu__link">Início</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/register.html" class="mobile-menu__link">Registrar</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/guide.html" class="mobile-menu__link">Guia</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/history.html" class="mobile-menu__link">Histórico</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="header-exit" tabindex="4">
             <img class="header-exit__image" src="../assets/image/svg/exit.svg" 
             alt="Imagem de uma porta" title="Botão de saída">
@@ -207,6 +232,7 @@
     <script type="module" src="../assets/js/validationRegister.js" defer></script>
     <script type="text/javascript" src="../assets/js/timeDescription.js" defer></script>
     <script type="text/javascript" src="../assets/js/exitButton.js" defer></script>
+    <script type="text/javascript" src="../assets/js/mobilMenu.js" defer></script>
     <script>
         if (sessionStorage.getItem('usuarioLogado') !== 'true') {
             window.location.replace('../pages/login.html');

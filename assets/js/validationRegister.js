@@ -1,22 +1,22 @@
 import { database } from './firebaseConfig.js';
 import { ref, push, onValue, remove, get, update } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
-const inputField       = document.querySelectorAll('.register-card__input');
-const erroMessages     = document.querySelectorAll('.register-validation');
-const clickValidation  = document.querySelectorAll('.register-button__add');
-const registerReturn   = document.querySelector('.register-return');
-const container        = document.querySelector('.exit-content');
-const historyContainer = document.querySelector('.history-content');
+const inputField        = document.querySelectorAll('.register-card__input');
+const erroMessages      = document.querySelectorAll('.register-validation');
+const clickValidation   = document.querySelectorAll('.register-button__add');
+const registerReturn    = document.querySelector('.register-return');
+const container         = document.querySelector('.exit-content');
+const historyContainer  = document.querySelector('.history-content');
 
-const filterInput    = document.getElementById('filter-input__date');
-const applyFilterBtn = document.querySelector('.filter-button__1');
-const showAllBtn     = document.querySelector('.filter-button__2');
+const filterInput       = document.getElementById('filter-input__date');
+const applyFilterBtn    = document.querySelector('.filter-button__1');
+const showAllBtn        = document.querySelector('.filter-button__2');
 
 let allHistoryData = {};
 
-const modal      = document.querySelector('.delete');
-const btnCancel  = modal ? modal.querySelector('.button--link1') : null;
-const btnConfirm = modal ? modal.querySelector('.button--link2') : null;
+const modal             = document.querySelector('.delete');
+const btnCancel         = modal ? modal.querySelector('.button--link1') : null;
+const btnConfirm        = modal ? modal.querySelector('.button--link2') : null;
 
 const nameOfPersonResponsible = () => {
     const value = inputField[0].value.trim();
@@ -133,17 +133,19 @@ const showDeleteConfirmation = (card) => {
             if (snapshot.exists()) {
                 const data = snapshot.val();
                 
-                push(ref(database, 'historico'), data)
+                const historyData = {
+                    ...data,
+                    deletedAt: new Date().toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'})
+                };
+                
+                push(ref(database, 'historico'), historyData)
                 .then(() => {
-                    
                     remove(ref(database, `saidas/${key}`));
-                    console.log("Removido e movido para o histórico com sucesso.");
                 })
                 .catch((error) => {
                     console.error("Erro ao adicionar dados ao histórico: ", error);
                 });
             } else {
-                console.log("Nenhum dado encontrado para remover.");
             }
         }).catch((error) => {
             console.error("Erro ao pegar dados para remover: ", error);
@@ -189,7 +191,7 @@ const addToHistory = (data, key) => {
                     <h4 class="excluded-right__title">Excluído:</h4>
                     <div class="excluded-right__area">
                         <span class="excluded-right__subtile">Hora:</span>
-                        <time class="excluded-right__time">${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</time>
+                        <time class="excluded-right__time">${data.deletedAt}</time>
                     </div>
                 </div>
                 <div class="excluded-right__attention">
@@ -215,7 +217,6 @@ if (clickValidation) {
 
             const hasError = [...erroMessages].some(span => span.textContent !== '');
             if (hasError) {
-                console.log("Validação falhou. Verifique os campos com erro.");
                 return;
             }
 
@@ -233,7 +234,6 @@ if (clickValidation) {
 
             push(ref(database, 'saidas'), data)
             .then(() => {
-                console.log("Dados adicionados ao Firebase com sucesso!");
             })
             .catch((error) => {
                 console.error("Erro ao adicionar dados ao Firebase: ", error);
@@ -262,13 +262,12 @@ if (isRegisterPage) {
             historyContainer.innerHTML = '';
             allHistoryData = snapshot.val() || {};
 
-            // transforma em array, ordena pela data (mais novo primeiro)
             const sorted = Object.entries(allHistoryData).sort(([, a], [, b]) => {
                 const [da, ma, ya] = a.date.split('/');
                 const [db, mb, yb] = b.date.split('/');
                 const dateA = new Date(`${ya}-${ma}-${da}`);
                 const dateB = new Date(`${yb}-${mb}-${db}`);
-                return dateB - dateA; // mais novo em cima
+                return dateB - dateA;
             });
 
             sorted.forEach(([key, data]) => {
@@ -324,7 +323,7 @@ let currentEditingCard = null;
 document.querySelector('.exit-content').addEventListener('click', (event) => {
     const editButton = event.target.closest('.exit-right__card-edit');
     if (editButton) {
-        const card = editButton.closest('.exit-card');
+        const card               = editButton.closest('.exit-card');
         const descriptionElement = card.querySelector('.exit-center__text');
         
         currentEditingKey  = card.dataset.key;
@@ -365,4 +364,3 @@ editConfirmBtn.addEventListener('click', () => {
             });
     }
 });
-

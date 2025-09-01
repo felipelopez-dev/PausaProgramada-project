@@ -1,5 +1,7 @@
 body {
     background-color: var(--color-pale-gray-blue);
+    overflow-x: hidden
+    ;
 }
 
 .content {
@@ -421,3 +423,172 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 1.5rem;
     text-align: center;
 }
+
+/* Media query */
+@media (min-width: 320px) and (max-width: 480px) {
+    .content {
+        padding: 0;
+    }
+
+    .history-area__title::before {
+        display: none;
+    }
+
+    .history-area__title {
+        font-size: 1.8rem;
+    }
+
+    .filter {
+        padding: 2rem;
+    }
+
+    .filter-area__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .filter-area__image {
+        width: 2rem;
+    }
+
+    .filter-input__area {
+        width: 28rem;
+    }
+
+    .filter-btn {
+        flex-direction: column;
+    }
+    
+    .excluded {
+        padding: 1rem;
+    }
+
+    .excluded-header__title {
+        font-size: 2rem;
+    }
+
+    .excluded-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .excluded-area {
+        padding: 0.5rem;
+    }
+
+    .excluded-center__text {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .content {
+        padding: 0;
+    }
+
+    .history-area__title::before {
+        display: none;
+    }
+
+    .history-area__title {
+        font-size: 1.8rem;
+    }
+
+    .filter {
+        padding: 2rem;
+    }
+
+    .filter-area__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .filter-area__image {
+        width: 2rem;
+    }
+
+    .filter-input__area {
+        width: 45rem;
+    }
+
+    .excluded {
+        padding: 1rem;
+    }
+
+    .excluded-header__title {
+        font-size: 2rem;
+    }
+
+    .excluded-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .excluded-area {
+        padding: 0.5rem;
+    }
+
+    .excluded-center__text {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .content {
+        padding: 0;
+    }
+
+    .history-area__title::before {
+        display: none;
+    }
+
+    .history-area__title {
+        font-size: 1.8rem;
+    }
+
+    .filter {
+        padding: 2rem;
+    }
+
+    .filter-area__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .filter-area__image {
+        width: 2rem;
+    }
+
+    .filter-input__area {
+        width: 100%
+    }
+
+    .excluded {
+        padding: 1rem;
+    }
+
+    .excluded-header__title {
+        font-size: 2rem;
+    }
+
+    .excluded-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .excluded-area {
+        padding: 0.5rem;
+    }
+
+    .excluded-center__text {
+        height: 20rem;
+    }
+}
+
+
+
+
+
+
+
+

@@ -55,6 +55,31 @@
                 </li>
             </ul>
         </nav>
+        <div class="header-mobile">
+            <img class="header-mobile__image" src="../assets/image/svg/menu.svg" 
+            alt="Imagem de menu" title="Botão de menu">
+        </div>
+        <div class="mobile">
+            <button class="close-menu">
+                <img class="close-menu__image" src="../assets/image/svg/close-circle.svg" alt="Ícone de fechar menu">
+            </button>
+            <nav class="mobile-menu">
+                <ul class="mobile-menu__content">
+                    <li class="mobile-menu__list">
+                        <a href="../index2.html" class="mobile-menu__link">Início</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/register2.html" class="mobile-menu__link">Registrar</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/guide2.html" class="mobile-menu__link">Guia</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="#" class="mobile-menu__link">Histórico</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="header-exit" tabindex="4">
           <img class="header-exit__image" src="../assets/image/svg/exit.svg" 
           alt="Imagem de uma porta" title="Botão de saída">
@@ -549,22 +574,6 @@
         <section class="question-infor">
           <details class="question-infor__area">
             <summary class="question-infor__title">
-              A plataforma funciona em celulares e tablets?
-            </summary>
-            <div class="question-infor__container">
-              <p class="question-infor__text">
-                Atualmente, o site foi desenvolvido e otimizado para uso em computadores e desktops. No entanto, 
-                a equipe de desenvolvimento já está trabalhando em uma futura atualização para torná-lo totalmente 
-                compatível e responsivo para dispositivos móveis, como celulares e tablets. Agradecemos a sua 
-                paciência e compreensão.
-              </p>
-            </div>
-          </details>
-        </section>
-
-        <section class="question-infor">
-          <details class="question-infor__area">
-            <summary class="question-infor__title">
               O que significa o contorno verde que aparece em um registro?
             </summary>
             <div class="question-infor__container">
@@ -599,6 +608,7 @@
 
      <script type="text/javascript" src="../assets/js/filterGuide.js" defer></script>
      <script type="text/javascript" src="../assets/js/exitButton.js" defer></script>
+     <script type="text/javascript" src="../assets/js/mobilMenu.js" defer></script>
      <script>
       if (sessionStorage.getItem('usuarioLogado') !== 'true') {
           window.location.replace('../pages/login.html');

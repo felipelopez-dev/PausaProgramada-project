@@ -21,6 +21,28 @@
     <meta name="description" content="PausaProgramada é a plataforma central para otimizar o controlo de saídas
     e regressos de colaboradores, promovendo comunicação clara sobre o estado das tarefas e produtos. Solução 
     completa para equipas que buscam controlo, transparência e eficiência.">
+    <meta name="distribution" content="Brazil">
+    <meta name="geo.region" content="BR-PR">
+    <meta name="robots" content="index, nofollow">
+    <meta name="googlebot" content="index, nofollow">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="PausaProgramada - Controlo de Saídas e Retransmissão">
+    <meta property="og:description" content="PausaProgramada é a plataforma central para otimizar 
+    o controlo de saídas e regressos de colaboradores, promovendo comunicação clara sobre tarefas e produtos.
+    Solução completa para equipas que buscam controlo, transparência e eficiência.">
+    <meta property="og:image" content="https://seudominio.com/assets/image/brand/logo.png">
+    <meta property="og:url" content="https://seudominio.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PausaProgramada - Controlo de Saídas e Retransmissão">
+    <meta name="twitter:description" content="PausaProgramada é a plataforma central para otimizar o controlo 
+    de saídas e regressos de colaboradores, promovendo comunicação clara sobre tarefas e produtos. Solução 
+    completa para equipas que buscam controlo, transparência e eficiência.">
+    <meta name="twitter:image" content="https://seudominio.com/assets/image/brand/logo.png">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/image/favicon/apple-touch-icon.png">
@@ -65,6 +87,31 @@
                 </li>
             </ul>
         </nav>
+        <div class="header-mobile">
+            <img class="header-mobile__image" src="assets/image/svg/menu.svg" 
+            alt="Imagem de menu" title="Botão de menu">
+        </div>
+        <div class="mobile">
+            <button class="close-menu">
+                <img class="close-menu__image" src="assets/image/svg/close-circle.svg" alt="Ícone de fechar menu">
+            </button>
+            <nav class="mobile-menu">
+                <ul class="mobile-menu__content">
+                    <li class="mobile-menu__list">
+                        <a href="index3.html" class="mobile-menu__link">Início</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="./pages/register3.html" class="mobile-menu__link">Registrar</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="./pages/guide3.html" class="mobile-menu__link">Guia</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="#" class="mobile-menu__link">Histórico</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="header-exit">
             <a href="./pages/login.html">
               <img class="header-exit__image" src="assets/image/svg/exit.svg" 
@@ -161,7 +208,8 @@
         </p>
     </footer>
    
-    <script type="text/javascript" src="assets/js/exitButton.js" defer></script>
+    <script type="text/javascript" src="assets/js/exitButtonIndex.js" defer></script>
+    <script type="text/javascript" src="assets/js/mobilMenu.js" defer></script>
     <script>
         if (sessionStorage.getItem('usuarioLogado') !== 'true') {
             window.location.replace('./pages/login.html');
