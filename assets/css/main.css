@@ -54,7 +54,7 @@ body {
     gap: 4rem;
 }
 
-.header-menu__list {
+.header-menu__link {
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-white);
@@ -62,9 +62,37 @@ body {
     transition: all 0.7s ease;
 }
 
-.header-menu__list:hover {
+.header-menu__link:hover {
     transform: translateY(-0.1rem);
     color: var(--color-teal-dark);
+}
+
+.header--menu__link {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-badge {
+    background-color: var(--color-red);
+    height: 2.4rem;
+    width: 2.4rem;
+    font-size: 1.4rem;
+    border-radius:50%;
+    cursor: pointer;
+    transition: all 0.5rem ease;
+}
+
+.notification-badge:hover {
+    transform: translateY(-0.1rem);
+}
+
+.notification-badge__text {
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 0.4rem;
+    font-weight: bold;
 }
 
 .header-mobile {

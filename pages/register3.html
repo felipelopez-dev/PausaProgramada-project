@@ -86,7 +86,6 @@
         </div>
     </header>
 
-    <main class="main-register">
         <div class="register">
             <h1 class="register-title">
                 Registrar de saída
@@ -220,16 +219,33 @@
                 </div>
             </div>
         </div>
-    </main>
 
-    <footer class="footer">
-        <p class="footer-description">
-            © 2025 Desenvolvido por Felipe Lopez - Engenheiro de Software.
-        </p>
-        <p class="footer-text">
-            Projeto com todos os direitos reservados.
-        </p>
-    </footer>
+        <!-- Block of alarm update -->
+        <div class="alarm alarm--add">
+            <div class="alarm-mensage">
+                <div class="alarm-title">Nova saída registrada!</div>
+                <img src="../assets/image/svg/bell.svg" 
+                class="alarm-image" alt="Imagem de sino">
+            </div>
+            <div class="alarm-card__button">
+                <button class="alarm-button">
+                    ok
+                </button>
+            </div>
+        </div>
+
+        <div class="alarm alarm--update">
+            <div class="alarm-mensage">
+                <div class="alarm-title">Uma atulização nova!</div>
+                <img src="../assets/image/svg/bell.svg" 
+                class="alarm-image" alt="Imagem de sino">
+            </div>
+            <div class="alarm-card__button">
+                <button class="alarm-button button--update">
+                    ok
+                </button>
+            </div>
+        </div>
 
     <script type="module" src="../assets/js/firebaseConfig.js" defer></script>
     <script type="module" src="../assets/js/validationRegister.js" defer></script>

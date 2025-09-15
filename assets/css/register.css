@@ -5,11 +5,6 @@ body {
     background-color: var(--color-light-gray);
 }
 
-.main-register {
-    width: 100vw;
-    height: 100vh;
-}
-
 .register {
     margin-top: 3rem;
     padding: 3rem;

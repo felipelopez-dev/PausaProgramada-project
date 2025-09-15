@@ -12,7 +12,17 @@ const filterInput       = document.getElementById('filter-input__date');
 const applyFilterBtn    = document.querySelector('.filter-button__1');
 const showAllBtn        = document.querySelector('.filter-button__2');
 
+// Elementos do alarme e notificações
+const notificationSound = new Audio('../assets/audio/notification.mp3');
+const alarmAdd          = document.querySelector('.alarm--add');
+const alarmUpdate       = document.querySelector('.alarm--update');
+
+// Variáveis de controle de estado
 let allHistoryData = {};
+let lastKnownKeys = new Set();
+let isFirstLoad = true;
+let isUpdating = false;
+let notificationInterval = null; // Nova variável para controlar o som
 
 const modal             = document.querySelector('.delete');
 const btnCancel         = modal ? modal.querySelector('.button--link1') : null;
@@ -207,6 +217,53 @@ const addToHistory = (data, key) => {
     }
 };
 
+// Funções para mostrar e esconder os alarmes
+const showAlarm = (type) => {
+    let alarm = type === 'add' ? alarmAdd : alarmUpdate;
+    if (!alarm) return;
+    alarm.classList.add('alarm--active');
+    
+    // Toca o som a cada 2 segundos
+    if (notificationInterval === null) {
+        notificationSound.play();
+        notificationInterval = setInterval(() => {
+            notificationSound.play();
+        }, 2000); // 2 segundos
+    }
+};
+
+const hideAlarm = (type) => {
+    let alarm = type === 'add' ? alarmAdd : alarmUpdate;
+    if (!alarm) return;
+    alarm.classList.remove('alarm--active');
+    
+    // Para o som
+    if (notificationInterval !== null) {
+        clearInterval(notificationInterval);
+        notificationInterval = null;
+    }
+};
+
+if (alarmAdd) {
+    alarmAdd.querySelector('.alarm-button').addEventListener('click', () => {
+        hideAlarm('add');
+    });
+}
+
+if (alarmUpdate) {
+    alarmUpdate.querySelector('.alarm-button').addEventListener('click', () => {
+        hideAlarm('update');
+        const updatedKeys = [...lastKnownKeys].filter(key => {
+            const cardData = container.querySelector(`[data-key="${key}"]`);
+            return cardData && cardData.classList.contains('card-updated');
+        });
+        updatedKeys.forEach(key => {
+            const cardRef = ref(database, `saidas/${key}`);
+            update(cardRef, { updated: null });
+        });
+    });
+}
+
 if (clickValidation) {
     clickValidation.forEach(item => {
         item.addEventListener('click', () => {
@@ -248,6 +305,36 @@ const isHistoryPage  = window.location.pathname.includes('history.html');
 if (isRegisterPage) {
     onValue(ref(database, 'saidas'), (snapshot) => {
         if(container) {
+            const currentData = snapshot.val() || {};
+            const currentKeys = new Set(Object.keys(currentData));
+
+            if (isFirstLoad) {
+                lastKnownKeys = currentKeys;
+                isFirstLoad = false;
+            } else {
+                // Verifica por atualizações primeiro
+                const updatedKeys = [...lastKnownKeys].filter(key => {
+                    const data = currentData[key];
+                    return data && data.updated;
+                });
+                
+                if (updatedKeys.length > 0) {
+                    showAlarm('update');
+                } else {
+                    // Se não houver atualizações, verifica por novas saídas
+                    const addedKeys = [...currentKeys].filter(key => !lastKnownKeys.has(key));
+                    if (addedKeys.length > 0) {
+                        const latestKey = addedKeys[addedKeys.length - 1];
+                        const data = currentData[latestKey];
+                        if (!data.updated) {
+                            showAlarm('add');
+                        }
+                    }
+                }
+                
+                lastKnownKeys = currentKeys;
+            }
+
             container.innerHTML = '';
             snapshot.forEach((childSnapshot) => {
                 const data = childSnapshot.val();
