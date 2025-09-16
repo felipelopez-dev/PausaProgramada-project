@@ -100,10 +100,10 @@ const exitContent = (data, key) => {
         </div>
 
         <div class="exit-right">
-            <div class="exit-right__card-delete delete--register2 delete--register3" tabindex="11">
+            <div class="exit-right__card-delete delete--register3" tabindex="11">
                 <img class="exit-right__image-delete" src="../assets/image/svg/delete.svg" alt="Imagem de um lixeiro" title="Botão de excluir.">
             </div>
-            <div class="exit-right__card-edit edit--register2 edit--register3" tabindex="12">
+            <div class="exit-right__card-edit edit--register3" tabindex="12">
                 <img class="exit-right__image-edit" src="../assets/image/svg/edit.svg" 
                 alt="Imagem de um lápis" title="Botão de editar as saída.">
             </div>
